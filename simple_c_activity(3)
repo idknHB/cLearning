@@ -1,0 +1,20 @@
+#include <stdio.h>
+/*Desenvolver um algoritmo para ler o número de uma sala de aula, sua capacidade e o total de alunos matriculados na mesma e imprimir uma linha mostrando o número da sala, sua capacidade, o número de cadeiras ocupadas e sua disponibilidade indicando se a sala está lotada ou não.*/
+
+int main(void) {
+ int nSala, capacidade, alunos;
+
+  printf("informe o numero da sala, sua capacidade e o numero de alunos matriculados\n");
+  scanf("%d", &nSala);
+  scanf("%d", &capacidade);
+  scanf("%d", &alunos);
+
+  if(alunos == capacidade || alunos > capacidade){
+    printf("\n A sala %d está lotada", nSala);
+  }else if(alunos != capacidade && alunos < capacidade){
+    printf("\n A sala %d tem %d cadeiras e está com %d alunos.", nSala, capacidade, alunos);
+    printf("\n A sala %d não está lotada", nSala);
+  }
+  
+  return 0;
+}
