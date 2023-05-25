@@ -1,0 +1,76 @@
+#include <stdio.h>
+
+//Desenvolver um algoritmo que leia um número inteiro e verifique se o número é divisível por 5 e por 3 ao mesmo tempo.
+
+int main(void) {
+  int num;
+  printf("Digite um valor");
+  scanf("%d", &num);
+
+  if(num %5 == 0 && num %3 ==0){
+    printf("divisel por 5 e 3");
+  }else{
+    printf("não é divisível por 5 e 3");
+  }
+  return 0;
+}
+
+
+#include <stdio.h>
+
+//Dados quatro números distintos, desenvolver um algoritmo que determine e imprima a soma dos três menores.
+
+int main(void) {
+ int a,b,c,d, soma;
+
+  printf("digite 4 valores: ");
+  scanf("\n%d", &a);
+  scanf("%d", &b);
+  scanf("%d", &c);
+  scanf("%d", &d);
+  
+
+  if(a > b && a > c && a > d){
+    soma = (b+c+d);
+    printf("\n = %d", soma);
+  }else if(b > a && b > c && b > d){
+    soma = (a+c+d);
+    printf("\n = %d", soma);
+  }else if(c > a && c > b && c > d){
+    soma = (a+b+d);
+    printf("\n = %d", soma);
+  }else if(d > a && d > b && d> c){
+    soma = (a+b+c);
+    printf("\n = %d", soma);
+  }else{
+    soma = (a+b+c+d);
+    printf("\n = %d", soma);
+  }
+  return 0;
+}
+
+#include <stdio.h>
+/*Desenvolver um algoritmo para ler um número “x” e calcular e imprimir o valor de “y” de acordo com as condições abaixo:
+y = x , se x < 1;
+y = 0 , se x = 1;
+y = x² , se x > 1;*/
+
+int main(void) {
+ int x, y;
+
+  printf("digite valor de x");
+  scanf("%d",&x);
+
+  if(x < 1){
+    y = x;
+    printf("\n X = %d e y = %d", x, y);
+  }else if(x == 1){
+    y = 0;
+    printf("\n X = %d e y = %d", x, y);
+  }else if(x > 1){
+    y = pow(x,2);
+    printf("\n X = %d e y = %d", x, y);
+  }
+  return 0;
+}
+
