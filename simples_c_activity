@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void media(float n1, float n2, float n3, float *pmE,float *pmA);
+int main(void) {
+  float n1, n2, n3,mE, mA;
+
+  printf("entre com as notas do aluno: ");
+  scanf("\n%f", &n1);
+  scanf("%f", &n2);
+  scanf("%f", &n3);
+
+  media(n1,n2,n3,&mE,&mA);
+
+  printf("\n%.2f", mE);
+  printf("\n%.2f", mA);
+  return 0;
+}
+
+void media(float n1, float n2, float n3, float *pmE,float *pmA){
+  *pmE = (n1+n2+n3)/3;
+  *pmA = (n1 + (n2*2) + (n3*3) + *pmE)/7;
+}
